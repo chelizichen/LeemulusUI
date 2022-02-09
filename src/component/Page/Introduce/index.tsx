@@ -12,6 +12,7 @@ import { ICell } from "./component/cell"
 import { ICollapse } from "./component/collapse"
 import { IDocuments } from "./component/documents"
 import { ILoading } from "./component/loading"
+import { IMenu } from "./component/menu"
 
 function Introduce()
 {
@@ -59,6 +60,7 @@ function Introduce()
                 <Route path="collapse" element={<ICollapse/>}></Route>
                 <Route path="documents" element={<IDocuments/>}></Route>
                 <Route path="loading" element={<ILoading/>}></Route>
+                <Route path="menu" element={<IMenu/>}></Route>
 
 
             </Routes>

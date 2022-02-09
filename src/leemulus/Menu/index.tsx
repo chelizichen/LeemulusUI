@@ -9,7 +9,7 @@ const flexCenterSpaceBetween:React.CSSProperties = {
 interface MenuProps{
     fold:boolean,
     title:string,
-    children:React.ReactChild
+    children:React.PropsWithChildren<any>
 }
 interface MenuItemProps
 {
@@ -52,6 +52,7 @@ function MenuItem(props:MenuItemProps)
     // context 
     const isCheckedAll = useContext(CheckedAll)
     console.log(isCheckedAll);
+    const [isChecked,setChecked] = useState<boolean>(checked)
     // set prop 
     // const [isChecked,setChecked] = useState(checked)
 
@@ -69,9 +70,9 @@ function MenuItem(props:MenuItemProps)
         else
         {
             return(
-                <div style={flexCenterSpaceBetween}>
+                <div style={flexCenterSpaceBetween} onClick={()=>setChecked(isCheckedAll=> isCheckedAll===true?false:true)}>
                     <div>{value}</div>
-                    <div style={{display:checked===true?"block":"none"}}>选中</div>
+                    <div style={{display:isChecked===true?"block":"none"}}>选中</div>
                 </div>
             )
         }
