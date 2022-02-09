@@ -13,6 +13,7 @@ import { ICollapse } from "./component/collapse"
 import { IDocuments } from "./component/documents"
 import { ILoading } from "./component/loading"
 import { IMenu } from "./component/menu"
+import { IPopup } from "./component/popup"
 
 function Introduce()
 {
@@ -61,6 +62,7 @@ function Introduce()
                 <Route path="documents" element={<IDocuments/>}></Route>
                 <Route path="loading" element={<ILoading/>}></Route>
                 <Route path="menu" element={<IMenu/>}></Route>
+                <Route path="popup" element={<IPopup/>}></Route>
 
 
             </Routes>

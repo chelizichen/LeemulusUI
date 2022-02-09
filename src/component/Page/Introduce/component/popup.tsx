@@ -1,39 +1,48 @@
+import { useState } from "react"
 import { Board } from "../../../../leemulus/Board"
+import { Button } from "../../../../leemulus/Button"
 import { InnerDoc, OutterDoc } from "../../../../leemulus/Documents"
-import { Menu, MenuItem } from "../../../../leemulus/Menu"
+import { Popup } from "../../../../leemulus/Popup"
 import { Title } from "../../../../leemulus/Title"
-function IMenu()
+function IPopup()
 {
+    const [isShow,setShow] = useState<boolean>(false)
+    function changeShow()
+    {
+        setShow(isShow=> isShow ===true?false:true)
+    }
+
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
-        <Title title="Article">展示</Title>
+        <Title title="Cell">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <OutterDoc width={"80%"} height={'auto'} padding={'20px'} radius 
                     name={"参数名"} intro={"说明"} typeValue={"类型"}
                      defaultValue={"默认值"} ApiName={"# Props"} >
-                    <InnerDoc name={"load"} type={"string"} intro={"是否显示"} defaultValue={"false"}></InnerDoc>
-                    <InnerDoc name={"bindLoad"} type={"Function"} intro={"绑定函数"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"padding"} type={"string"} intro={"内间距"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"title"} type={"string"} intro={"标题"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"width"} type={"string"} intro={"宽度"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"height"} type={"string"} intro={"高度"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"children"} type={"ReactChild"} intro={"内容"} defaultValue={"-"}></InnerDoc>
+                
                 </OutterDoc>
                 
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
                     使用：
                 </div>
+                
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
+                    {'<Cell padding={"5px"} title="@ 13476973442"  width={"400px"} height={"30px"}>电话&微信</Cell>'}
                 </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
-                </div>
+
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
                     效果：
                 </div>
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
-                
-                <Menu fold={false} title="总选项">
-                    <MenuItem value="选项1" checked={true}/>
-                    <MenuItem value="选项2" checked={false}/>
-                    <MenuItem value="选项3" checked={false}/>
-                </Menu>
+                    <Popup isShow={isShow} content="遮罩层内容"/>
+                    <Button onChange={changeShow} loading={false}>
+                        按钮
+                    </Button>
 
                 </div>
 
@@ -43,12 +52,12 @@ function IMenu()
             <Title title="功能">设计</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>
-                    bindLoad 控制 Loading 组件的展示
+                    没有设计，没有功能，纯展示组件～
                 </div>
             </Board>
         </div>
     )
 }
 export{
-    IMenu
+    IPopup
 }

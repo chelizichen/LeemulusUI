@@ -53,8 +53,7 @@ function MenuItem(props:MenuItemProps)
     const isCheckedAll = useContext(CheckedAll)
     console.log(isCheckedAll);
     const [isChecked,setChecked] = useState<boolean>(checked)
-    // set prop 
-    // const [isChecked,setChecked] = useState(checked)
+
 
     function CheckedComponent():ReactElement
     {

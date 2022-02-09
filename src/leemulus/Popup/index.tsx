@@ -1,12 +1,16 @@
-function Popup(props)
+interface Popup{
+    isShow:boolean,
+    content:string
+}
+function Popup(props:Popup)
 {
     const {isShow,content } = props
-    const RootNode = document.getElementById('root')
-    const PopNode = document.getElementById('PopUpNode')
+    const RootNode:any = document.getElementById('root')
+    const PopNode:any = document.getElementById('PopUpNode')
 
     if(PopNode === null)
     {
-        const PopNode = document.createElement('div')
+        const PopNode:any = document.createElement('div')
         PopNode.setAttribute('id','PopUpNode')
         RootNode.appendChild(PopNode)
         const BroNode = RootNode.children[0]

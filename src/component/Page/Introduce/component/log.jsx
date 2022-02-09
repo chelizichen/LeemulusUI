@@ -11,6 +11,9 @@ function Log()
                     Menu 的交互逻辑似乎有点问题，暂未更新，准备重写
                 </div>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    修改了 PopUp组件 的交互逻辑
+                </div>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
                     更新了Cell组件
                 </div>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>
