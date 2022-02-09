@@ -1,0 +1,15 @@
+.exp_content_out
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.exp_content
+{
+    width: 32%;
+    margin: 20px 1% 20px 1%;
+    height: 300px;
+    /* background-color: #caddf5; */
+    border: 1px solid #caddf5;
+    padding: 10px;
+}
