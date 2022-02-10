@@ -6,44 +6,39 @@ function IMenu()
 {
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
-        <Title title="Article">展示</Title>
+            <Title title="Menu">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <OutterDoc width={"80%"} height={'auto'} padding={'20px'} radius 
                     name={"参数名"} intro={"说明"} typeValue={"类型"}
                      defaultValue={"默认值"} ApiName={"# Props"} >
-                    <InnerDoc name={"load"} type={"string"} intro={"是否显示"} defaultValue={"false"}></InnerDoc>
-                    <InnerDoc name={"bindLoad"} type={"Function"} intro={"绑定函数"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"fold"} type={"boolean"} intro={"是否展开"} defaultValue={"false"}></InnerDoc>
+                    <InnerDoc name={"title"} type={"string"} intro={"标题"} defaultValue={"-"}></InnerDoc>
+                    <InnerDoc name={"children"} type={"React.PropsWithChildren<any>"} intro={"子组件"} defaultValue={"-"}></InnerDoc>
                 </OutterDoc>
-                
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
-                    使用：
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px'}}>
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
-                    效果：
-                </div>
-                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
-                
+            </Board>
+            <Title title="MenuItem">展示</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                <OutterDoc width={"80%"} height={'auto'} padding={'20px'} radius 
+                    name={"参数名"} intro={"说明"} typeValue={"类型"}
+                     defaultValue={"默认值"} ApiName={"# Props"} >
+                    <InnerDoc name={"value"} type={"stringa"} intro={"值"} defaultValue={"false"}></InnerDoc>
+                    <InnerDoc name={"checked"} type={"boolean"} intro={"选中"} defaultValue={"-"}></InnerDoc>
+                </OutterDoc>    
+            </Board>
+
+            <Title title="显示">效果：</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <Menu fold={false} title="总选项">
                     <MenuItem value="选项1" checked={true}/>
                     <MenuItem value="选项2" checked={false}/>
                     <MenuItem value="选项3" checked={false}/>
                 </Menu>
-
-                </div>
-
-
-
             </Board>
+
             <Title title="功能">设计</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>
-                    bindLoad 控制 Loading 组件的展示
+                    展示可选列表Menu List
                 </div>
             </Board>
         </div>
