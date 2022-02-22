@@ -9,7 +9,6 @@ function AddItem()
         {
             dispatch({todo:e.target.value,type:'add'})
             console.log(initState);
-            // console.log(itemMenu);
         }
     }
 
@@ -19,7 +18,7 @@ function AddItem()
     }
 
     return(
-        <div>
+        <div style={{textAlign:'center'}}>
             <input type="text" onKeyUp={logValue} />
             <>
                 {

@@ -2,8 +2,6 @@ interface itemMenuInterFace{
     index:number,
     todo:string,
     type:string,
-    length:number,
-    push:Function
 }
 
 
