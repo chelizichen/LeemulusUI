@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from 'react';
+import React, { CSSProperties } from 'react';
 import './index.css'
 type ButtonType = "primary"|"info"|"danger"|"warning"
 interface ButtonProps{
