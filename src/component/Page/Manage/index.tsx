@@ -1,7 +1,12 @@
+import { TComponent } from "./component/TComponent"
+
 function Manage()
 {
     return(
-        <div>Manage</div>
+        <div>
+            <h1>Manage</h1>
+            <TComponent firstName={"leemulus"} lastName={""}/>
+        </div>
     )
 }
 export  {
