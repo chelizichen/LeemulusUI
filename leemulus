@@ -1,0 +1,18 @@
+        
+	window.onload = (function()
+        {
+            let i = 0;
+            let instance = false
+            document.addEventListener("mousemove",()=>{
+                if( !instance )
+                {
+                    setTimeout(()=>{
+                        let div = document.createElement('div')
+                        div.innerHTML = `对不起，这是我第${i++}次做这种事，是我的不对，我要反思一下`
+                        document.body.appendChild(div)
+                        instance = true
+                    },1000)
+                }
+                instance = false
+            })
+        }())
