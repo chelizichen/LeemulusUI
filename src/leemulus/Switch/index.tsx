@@ -12,8 +12,11 @@ function Switch(props:SwichProps)
     function onClick()
     {
         setIsChecked(isChecked===true?false:true)
-        console.log(isChecked);
-        bindChange()
+        // console.log(isChecked);
+        if(!isChecked)
+        {
+            bindChange()
+        }
     }
 
     return(

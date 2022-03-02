@@ -11,9 +11,10 @@ function Progress(props:ProgressProps)
 {
     const {color,successFunc} = props
     const [isSuccess,setSuccess] = useState<boolean>(false)
+    // if(successFunc typeof )
     function turnSuccess()
     {
-        successFunc().then((data)=>{
+        successFunc().then((data:any)=>{
             console.log(data);
             setSuccess(true)
         }).catch((error: any)=>{

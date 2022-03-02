@@ -5,6 +5,13 @@ function Log()
 {
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+            <Title title="2022.3.2">开发日志</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    组件展示已基本完成
+                </div>
+            </Board>
+
             <Title title="2022.2.9">开发日志</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>

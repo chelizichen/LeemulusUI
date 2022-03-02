@@ -15,6 +15,11 @@ import { ILoading } from "./component/loading"
 import { IMenu } from "./component/menu"
 import { IPopup } from "./component/popup"
 import { INavbar } from "./component/navbar"
+import { IProgress } from "./component/progress"
+import { ISlider } from "./component/slider"
+import { ISwitch } from "./component/switch"
+import { ITag } from "./component/tag"
+import { ITitle } from "./component/title"
 
 function Introduce()
 {
@@ -65,9 +70,12 @@ function Introduce()
                 <Route path="menu" element={<IMenu/>}></Route>
                 <Route path="popup" element={<IPopup/>}></Route>
                 <Route path="navbar" element={<INavbar/>}></Route>
-
-
-
+                <Route path="navbar" element={<INavbar/>}></Route>
+                <Route path="progress" element={<IProgress/>}></Route>
+                <Route path="slider" element={<ISlider/>}></Route>
+                <Route path="switch" element={<ISwitch/>}></Route>
+                <Route path="tag" element={<ITag/>}></Route>
+                <Route path="title" element={<ITitle/>}></Route>
             </Routes>
         </div>
     )
