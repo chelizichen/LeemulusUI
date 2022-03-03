@@ -18,7 +18,7 @@ function Button(props:ButtonProps)
     const  {type,harline,loading,onChange,disable,style} = props
     function ChangeLoading()
     {
-       onChange()
+        onChange()
     }
     const ButtonStyle:React.CSSProperties = {
         width:'90px',

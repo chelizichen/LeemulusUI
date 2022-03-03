@@ -1,6 +1,5 @@
 import { Board } from "../../../../leemulus/Board"
 import { InnerDoc, OutterDoc } from "../../../../leemulus/Documents"
-import { Progress } from "../../../../leemulus/Progress"
 import { Slider } from "../../../../leemulus/Slider"
 import { Title } from "../../../../leemulus/Title"
 function ISlider()

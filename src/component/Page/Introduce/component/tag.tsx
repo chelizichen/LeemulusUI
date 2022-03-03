@@ -1,14 +1,9 @@
 import { Board } from "../../../../leemulus/Board"
 import { InnerDoc, OutterDoc } from "../../../../leemulus/Documents"
-import { Switch } from "../../../../leemulus/Switch"
 import { Tag } from "../../../../leemulus/Tag";
 import { Title } from "../../../../leemulus/Title"
 function ITag()
 {
-    function sayHello()
-    {
-        console.log('hello world');
-    }
 
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
@@ -40,7 +35,7 @@ function ITag()
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
                     效果：
                 </div>
-                
+
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
                     <Tag type={"primary"} close={false} width={"400px"} height={"20px"} >HELLO</Tag>
                 </div>

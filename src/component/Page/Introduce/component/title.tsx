@@ -1,14 +1,8 @@
 import { Board } from "../../../../leemulus/Board"
 import { InnerDoc, OutterDoc } from "../../../../leemulus/Documents"
-import { Switch } from "../../../../leemulus/Switch"
-import { Tag } from "../../../../leemulus/Tag";
 import { Title } from "../../../../leemulus/Title"
 function ITitle()
 {
-    function sayHello()
-    {
-        console.log('hello world');
-    }
 
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
