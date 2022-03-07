@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 
 interface memoProps
 {
@@ -19,10 +19,15 @@ const UseMemoComponent:React.FC<memoProps> = memo( ({ data }) =>{
 
 const HookDemo =()=>{
 
-    console.log('hook rerender');
-
     const [count,setCount] = useState<number>(1)
     const [name,setName] = useState<string>('leemulus')
+    
+    useEffect(()=>{
+        console.log('count');
+    },[count])
+    useEffect(()=>{
+        console.log('name');
+    },[name])
     // const data ={
     //     name
     // }

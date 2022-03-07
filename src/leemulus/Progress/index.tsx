@@ -22,9 +22,11 @@ function Progress(props:ProgressProps)
             setSuccess(false)
         })
     }
+    
     useEffect(()=>{
         turnSuccess()
-    })
+    },[])
+
     return(
         <div style={{backgroundColor:isSuccess === true?color:'whitesmoke',height:'20px',width:'100%'}}></div>
     )

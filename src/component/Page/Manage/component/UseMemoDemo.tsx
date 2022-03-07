@@ -7,11 +7,18 @@ function UseMemoDemo()
     const doubleNumber = useMemo(()=>{
         return slowFunction(num)
     },[num])
-    const themeStyle = {
-        backgroundColor: dark?'white':'black',
-        color: dark?'black':'white',
 
-    }
+    const themeStyle = useMemo(()=>{
+        return{
+            backgroundColor: dark?'white':'black',
+            color: dark?'black':'white',
+        }
+    },[dark])
+    // 保存对象的引用，否则每次修改state时会重新运行消耗内存
+    // const themeStyle = {
+    //     backgroundColor: dark?'white':'black',
+    //     color: dark?'black':'white',
+    // }
     return(
         <div>
             <input type="number" value={num} onChange={e => setNum(parseInt(e.target.value))}/>

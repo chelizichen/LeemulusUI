@@ -5,6 +5,26 @@ function Log()
 {
     return(
         <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+            <Title title="2022.3.7 晚上">开发日志</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    Echarts 动态更改效果
+                </div>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    疫情封校是真的烦
+                </div>
+            </Board>
+
+            <Title title="2022.3.7">开发日志</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    Progress 解决反复调用的问题
+                </div>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    Collapse 小 Bug
+                </div>
+            </Board>
+
             <Title title="2022.3.2">开发日志</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>

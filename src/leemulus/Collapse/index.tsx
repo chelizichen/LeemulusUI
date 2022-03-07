@@ -1,4 +1,4 @@
-import React,{ CSSProperties, useContext, useState } from "react"
+import React,{ CSSProperties, useContext, useMemo, useState } from "react"
 import { NavLink } from "react-router-dom"
 interface contextObject{
     active:number|Array<number>,
@@ -30,14 +30,17 @@ function Collapse(props:CollapseProps)
     function toggleActive(activeName:number){
         setActive([activeName])
     }
-    const borderStyle:React.CSSProperties = {
-        border:'1px solid blue',
-        width
-    }
-    const comStyle:React.CSSProperties = {
-        width
-    }
-    console.log('re render');
+    const borderStyle:React.CSSProperties = useMemo(()=>{
+        return{
+            border:'1px solid blue',
+            width
+        }
+    },[width])
+    const comStyle:React.CSSProperties = useMemo(()=>{
+        return{
+            width
+        }
+    },[width])
     return(
         <>
             <div style={ border === true?borderStyle:comStyle}>
@@ -55,13 +58,16 @@ function CollapseItem(props:CollapseItemProps)
     const {title,subtitle,name} = props
     const {active,toggleActive,width} = useContext<contextObject>(numberContext)
     const [currNode,setCurrNode] = useState<number|Array<number>>(active)
-    const collapseItemStyle:React.CSSProperties = {
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'space-between',
-        width,
-        borderBottom:'1px solid rgb(196 196 219)'
-    }
+    const collapseItemStyle:React.CSSProperties = useMemo(()=>
+    {
+        return{
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'space-between',
+            width,
+            borderBottom:'1px solid rgb(196 196 219)'
+            }
+    },[width])
     function changeIndex()
     {
         // judge is obj or number

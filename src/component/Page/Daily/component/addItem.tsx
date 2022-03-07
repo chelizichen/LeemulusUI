@@ -2,13 +2,14 @@ import {   useReducer } from "react";
 // import { addItemReducer,initState } from "./addItemReducer";
 
 interface itemMenuInterFace{
-    index?:number,
+    index:number,
     todo:string,
-    type:string,
+    type?:string,
+    important?:boolean
 }
 
 
-let initState = [{index:1,todo:'2022 年 2月 21 日 '}]
+let initState:Array<itemMenuInterFace> = [{index:1,todo:'2022 年 2月 21 日 '}]
 function AddItem()
 {
     // let [itemMenu,dispatch] = useReducer(addItemReducer)
@@ -29,7 +30,7 @@ function AddItem()
     function logValue(e:any){
         if(e.keyCode === 13)
         {
-            dispatch({todo:e.target.value,type:'add'})
+            dispatch({todo:e.target.value,type:'add',index:1})
             console.log(initState);
             console.log('itemMenu',itemMenu);
             

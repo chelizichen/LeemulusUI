@@ -31,11 +31,13 @@ function Home()
     }
     useEffect(()=>{
         initCharts()
-    })
+    },[])
     function initSuccess():Promise<string>    
     {
         return new Promise<string>((resolve,reject)=>{
-            resolve('Promise Data')
+            setTimeout(()=>{
+                resolve('Promise Data')
+            },2000)
             // reject('promise')
         })
     }
@@ -74,7 +76,7 @@ function Home()
                 </div>
             </div>
             
-            <Progress color="blue" successFunc={initSuccess}/>
+            <Progress color="blue" successFunc={()=>initSuccess()}/>
             <div style={{display: "flex",alignItems: "center",justifyContent: "space-between",padding:"20px 20%"}}>
                <div>
                     <Cell padding={"5px"} title="@ 13476973442"  width={"400px"} height={"30px"}>电话&微信</Cell>

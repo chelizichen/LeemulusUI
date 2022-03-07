@@ -9,6 +9,7 @@ import { Manage } from './component/Page/Manage';
 
 import { NavBar } from './leemulus/NavBar';
 import { Loading } from './leemulus/Loading';
+import { MyEcharts } from './component/Page/Echarts';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         <NavLink to='Documents' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Documents</NavLink>
         <NavLink to='Daily' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Daily</NavLink>
         <NavLink to='Manage' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Manage</NavLink>
+        <NavLink to='Echarts' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Echarts</NavLink>
+
       </div>
         
         <NavBar>
@@ -40,6 +43,8 @@ function App() {
           <Route path="Documents/*" element={<Documents/>}></Route>
           <Route path="Daily/*" element={<Daily/>}></Route>
           <Route path="Manage/*" element={<Manage/>}></Route>
+          <Route path="Echarts/*" element={<MyEcharts/>}></Route>
+
         </Routes>
       </BrowserRouter>
     </div>
