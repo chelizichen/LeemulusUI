@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import { Board } from "../../../leemulus/Board";
 import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Collapse";
 import { AxiosComponent } from "./component/axios";
+import { TestCallBack } from "./component/callback";
 import { LocalStorageComponent } from "./component/loaclStorage";
 import { Presicion } from "./component/presicion";
 import { SessionStorageComponent } from "./component/sessionStorage";
@@ -27,7 +28,7 @@ function Documents()
                         <CollapseItemCell to={"localstorage"} content={"Localstorage"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={"sessionstorage"} content={"Sessionstorage"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={"presicion"} content={"Presicion"} style={{textAlign:"center"}}></CollapseItemCell>
-
+                        <CollapseItemCell to={"callback"} content={"CallBack"} style={{textAlign:"center"}}></CollapseItemCell>
                     </CollapseItem>
             </Collapse>
         </Board>
@@ -36,7 +37,7 @@ function Documents()
             <Route path="localstorage" element={<LocalStorageComponent/>}></Route>
             <Route path="sessionstorage" element={<SessionStorageComponent/>}></Route>
             <Route path="presicion" element={<Presicion/>}></Route>
-
+            <Route path="callback" element={<TestCallBack/>}></Route>
         </Routes>
     </div>
     )
