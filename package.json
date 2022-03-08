@@ -15,6 +15,7 @@
     "axios": "^0.26.0",
     "babel-jest": "^27.5.1",
     "echarts": "^5.2.2",
+    "echarts-stat": "^1.2.0",
     "express": "^4.17.3",
     "http-proxy-middleware": "^2.0.3",
     "react": "^17.0.2",

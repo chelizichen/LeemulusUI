@@ -3,6 +3,7 @@ import { Board } from "../../../leemulus/Board"
 import { CollapseItemCell } from "../../../leemulus/Collapse"
 import { Demo1 } from "./component/demo1"
 import { Demo2 } from "./component/demo2"
+import { Demo3 } from "./component/demo3"
 
 function MyEcharts()
 {
@@ -18,6 +19,8 @@ function MyEcharts()
                 <Routes>
                     <Route path="demo1" element={<Demo1/>}></Route>
                     <Route path="demo2" element={<Demo2/>}></Route>
+                    <Route path="demo3" element={<Demo3/>}></Route>
+
 
                 </Routes>  
             </div>
