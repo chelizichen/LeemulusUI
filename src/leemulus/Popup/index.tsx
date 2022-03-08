@@ -1,8 +1,8 @@
-interface Popup{
+interface Popupprops{
     isShow:boolean,
     content:string
 }
-function Popup(props:Popup)
+function Popup(props:Popupprops)
 {
     const {isShow,content } = props
     const RootNode:any = document.getElementById('root')

@@ -26,6 +26,7 @@ function NavBar(props:NavBarProps)
     {
         window.location.href = getCurrIndex(index)
     }
+    
     function getCurrIndex(index:any)
     {
         let currPath = ''

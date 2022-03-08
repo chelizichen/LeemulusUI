@@ -25,6 +25,7 @@ let taskReducer = function(state = initTask,action:any)
                 break;
         }
 }
+
 function Task(){
     let [allTask,dispatch] = useReducer(taskReducer,initTask)
 

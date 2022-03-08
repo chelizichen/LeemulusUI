@@ -1,4 +1,6 @@
 import { useEffect,useState } from "react"
+import { Board } from "../../../../leemulus/Board"
+import { Title } from "../../../../leemulus/Title"
 // import { clearTimeout } from "timers"
 
 interface callBackPropkey{
@@ -35,16 +37,29 @@ function TestCallBack()
 
     useEffect(()=>()=>{
         setTimer(null)
-        console.log(timer);
     },[timer])
 
 
 
 
     return(
-        <div>
-            <h1>CallBack 组件 </h1>
-            <h2>{msg.msg}</h2>
+        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+            <Title title="CallBack">介绍</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>           
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
+                    介绍：
+                </div>
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',textAlign:'justify'}}>
+                    回调函数，用处很大
+                </div>
+            </Board>
+
+            <Title title="CallBack">展示</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>           
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
+                    {msg.msg}
+                </div>
+            </Board>
         </div>
     )
 }
