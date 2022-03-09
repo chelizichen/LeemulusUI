@@ -24,7 +24,7 @@ function App() {
     <div>
       <BrowserRouter>
       <div className="navLink">
-        <NavLink to='Home' className={ ({isActive}) =>'defaultStyle'+' LeemulusStyle' + (isActive ?' activeStyle':'')} >Leemulus</NavLink>
+        <NavLink to='Home' className={ ({isActive}) =>'defaultStyle' + ' LeemulusStyle' + (isActive ?' activeStyle':'')} >Leemulus</NavLink>
         <NavLink to='Introduce' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Introduce</NavLink>
         <NavLink to='Documents' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Documents</NavLink>
         <NavLink to='Daily' className={ ({isActive}) =>'defaultStyle'+ (isActive ?' activeStyle':'')} >Daily</NavLink>

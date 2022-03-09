@@ -1,4 +1,8 @@
 import { useReducer } from "react"
+import { Board } from "../../../../leemulus/Board"
+import { Switch } from "../../../../leemulus/Switch"
+import { ShowCurrTime } from "../../../../leemulus/Time"
+import { Title } from "../../../../leemulus/Title"
 interface itemMenuInterFace{
     index:number,
     todo:string,
@@ -13,11 +17,11 @@ let initTask:any = [{index:1,todo:'2022 年 2月 21 日 '}]
 
 let taskReducer = function(state = initTask,action:any)
 {
-    const {todo,type,index} = action
+    const {todo,type,index,important} = action
         switch(type)
         {
             case "add":
-                return initTask.push({index:initTask.length+1,todo})
+                return initTask.push({index:initTask.length+1,todo,important})
             case "sub":
                 const subIndex = initTask.findIndex((el:itemMenuInterFace) => el.index === index)
                 return initTask.splice(subIndex,1)
@@ -33,27 +37,24 @@ function Task(){
     {
         dispatch({type:'sub',index,todo:''})
     }
-
-    function logValue(e:any){
-        if(e.keyCode === 13)
-        {
-            dispatch({todo:e.target.value,type:'add',index:1})
-        }
-    }
-    return(
-        <div>
-            <h1>全部任务</h1>
-            <h2>
-            {
-                    initTask.map((element:itemMenuInterFace) => {
-                        return(
-                            <div key={element.index} onClick={()=>subItem(element.index)}>{element.todo}</div>
-                        )
-                    })
-                }
-            </h2>
-            <input type="text" onKeyUp={logValue} />
-        </div>
+        return(
+            <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+                <Title title="Task">
+                    <ShowCurrTime/>
+                </Title>
+    
+                <Board  border style={{padding:'30px 50px',marginTop:'20px',marginBottom:'20px'}}>       
+                    <ol>
+                        {
+                            allTask.map((el:itemMenuInterFace)=>{
+                                return(
+                                    <li key={el.index} onClick={()=>subItem(el.index)}>{el.todo}</li>
+                                )
+                            })
+                        }
+                    </ol>
+                </Board>
+            </div>
     )
 }
 export {

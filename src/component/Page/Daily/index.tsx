@@ -11,6 +11,7 @@ function Daily()
     return(
         <div>
             <div style={{display:'flex',marginTop:'20px'}}>
+            {/* <div> */}
                 <Board style={{width:'20%',padding:'10px'}} border>
                     <CollapseItemCell to={"today"} content={"今日"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"important"} content={"重要"} style={{textAlign:"center"}}></CollapseItemCell>

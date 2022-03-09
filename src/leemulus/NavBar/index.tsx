@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useHref, useLocation } from "react-router";
 const flexCenter:React.CSSProperties= {
     display:'flex',
     alignItems:'center',
@@ -23,10 +23,10 @@ function NavBar(props:NavBarProps)
     const LocationArray = currPathName.split("/")
 
     function HrefTo(index:any)
-    {
+    {        
         window.location.href = getCurrIndex(index)
     }
-    
+
     function getCurrIndex(index:any)
     {
         let currPath = ''

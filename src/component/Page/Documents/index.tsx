@@ -1,5 +1,5 @@
 import { memo, useEffect, useRef, useState } from "react"
-import { Route, Routes } from "react-router";
+import { Route, Routes, useHref, useLocation } from "react-router";
 import { Board } from "../../../leemulus/Board";
 import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Collapse";
 import { AxiosComponent } from "./component/axios";
@@ -14,11 +14,15 @@ function Documents()
 {
     const inputValue = useRef<HTMLInputElement>({} as any);
     const [msg,setMessage] = useState<string>('')
+    const hrePath = useHref(`uselocation?msg=${msg}`)
+    
+
     function HrefTo(e:any)
     {
         if(e.keyCode === 13)
         {
-            window.location.href = `uselocation?msg=${msg}`
+            // window.location.href = `uselocation?msg=${msg}`
+            window.location.href = hrePath
         }
     }
     return(
