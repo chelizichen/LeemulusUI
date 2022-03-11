@@ -4,6 +4,7 @@ import { CollapseItemCell } from "../../../leemulus/Collapse"
 import { Demo1 } from "./component/demo1"
 import { Demo2 } from "./component/demo2"
 import { Demo3 } from "./component/demo3"
+import { Vaccine } from "./component/vaccine"
 
 function MyEcharts()
 {
@@ -15,11 +16,14 @@ function MyEcharts()
                     <CollapseItemCell to={"demo2"} content={"项目2"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"demo3"} content={"项目3"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"demo4"} content={"项目4"} style={{textAlign:"center"}}></CollapseItemCell>
+                    <CollapseItemCell to={"vaccine"} content={"疫情数据"} style={{textAlign:"center"}}></CollapseItemCell>
+                
                 </Board>
                 <Routes>
                     <Route path="demo1" element={<Demo1/>}></Route>
                     <Route path="demo2" element={<Demo2/>}></Route>
                     <Route path="demo3" element={<Demo3/>}></Route>
+                    <Route path="vaccine" element={<Vaccine/>}></Route>
 
 
                 </Routes>  

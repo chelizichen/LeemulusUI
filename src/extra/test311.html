@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 面试题
+        let data = [
+            {a:'刘',b:'忠玉',c:'对象'},
+            {a:'彭',b:'城',c:'自己'},
+            {a:'程',b:'正权',c:'朋友'},
+            {a:'余',b:'浪',c:'朋友'},
+            {a:'刘',b:'忠玉',c:'女朋友'},
+        ]
+        console.log(data.sort(
+            function(a,b)
+            {
+                a.b.localeCompare(b.b)
+                a.c.localeCompare(b.c)
+                return a.a.localeCompare(b.a)
+            }
+        ));
+    </script>
+</body>
+</html>

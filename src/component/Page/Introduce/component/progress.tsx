@@ -10,10 +10,15 @@ function IProgress()
     // }
     function promiseAlert()
     {
-        return new Promise((resolve)=>{
+        return new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve('heelo world')
+                reject('heelo world')
             },2000)
+        }).then(data=>{
+            console.log(data);
+        }).catch(err=>{
+            console.error(err);
+            throw new TypeError(' 测试错误代码 ')
         })
     }
 

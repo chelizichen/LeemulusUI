@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log( null == null ); // true
+        console.log( null === null); // true 
+        console.log(undefined == undefined); // true
+        console.log(undefined === undefined); // true
+        console.log( {} == {} ); // false
+        console.log([] == []); // false
+        console.log([] instanceof  Object); // true
+
+
+        console.log( null === undefined); // false
+        console.log( null == undefined); // true
+        console.log(null instanceof Object); // false
+        console.log(typeof null); // Object
+
+        let a = [1,2,3]
+        let b = [1,2,3]
+        let c = '1,2,3'
+        console.log(a == b); // false
+        console.log(a == c); // true
+        console.log(a === b); // false
+        console.log(a === c); // false
+
+        let a1 = Symbol('123')
+        let b1 = Symbol('123')
+
+        console.log(a1.toString() == b1.toString()); // true
+        console.log(a1 == b1); // false
+        console.log(a1); // Symbol(123)
+
+
+
+
+    </script>
+</body>
+</html>

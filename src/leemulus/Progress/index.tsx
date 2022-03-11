@@ -13,13 +13,13 @@ function Progress(props:ProgressProps)
     const [isSuccess,setSuccess] = useState<boolean>(false)
     // if(successFunc typeof )
     function turnSuccess()
-    {
-        successFunc().then((data:any)=>{
-            console.log(data);
-            setSuccess(true)
-        }).catch((error: any)=>{
-            console.log(error);
-            setSuccess(false)
+    {   
+        new Promise((resolve,reject)=>{
+            resolve(successFunc())
+        }).then(()=>{
+            setSuccess(isSuccess => isSuccess === false?true:false)
+        }).catch((err)=>{
+            console.log(err);
         })
     }
     

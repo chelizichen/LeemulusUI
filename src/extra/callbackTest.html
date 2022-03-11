@@ -17,6 +17,18 @@
             console.log('hello world');
             console.log(args[0].a + args[0].b);
         })
+
+        function callbackTest(arr,fn)
+        {
+            arr.push(100),
+            fn()
+        }
+
+        callbackTest([123],function(){
+            console.log([123]);
+        })
+
+        
     </script>
 </body>
 </html>

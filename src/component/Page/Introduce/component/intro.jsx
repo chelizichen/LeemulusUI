@@ -45,6 +45,15 @@ function Intro()
                     但我仍然是一个React菜鸟，希望在开发的过程中能不断进步
                 </div>
             </Board>
+
+            <Title title="其他">其他问题</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                <div style={{textIndent:'20px',marginBottom:'20px'}}>
+                    样式经过只是做了一个大概，并没有去深入更改样式，但是因为在每个UI组件中
+                    都内置了，Object.Assign 将 原本的样式和新写的样式进行合并，所以从某种
+                    意义上也实现了组件样式的高度可定制化
+                </div>
+            </Board>
         </div>
     )
 }
