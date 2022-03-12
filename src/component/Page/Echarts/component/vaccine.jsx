@@ -8,35 +8,36 @@ class Vaccine extends React.Component{
     {
         super(props) ;
         this.state = {
-            initData:[]
+            initData:[
+                {time:'1.10','疫苗接种数':'29.1'},
+            ]
         } ;
         this.option = {
         } ;
         this.vaccineData = [
-            {time:'1.10','data':'29.1'},
-            {time:'1.14','data':'29.3'},
-            {time:'1.18','data':'29.5'},
-            {time:'1.22','data':'29.8'},
-            {time:'1.26','data':'30.1'},
-            {time:'1.30','data':'30.5'},
-            {time:'2.03','data':'30.9'},
-            {time:'2.07','data':'31.6'},
-            {time:'2.11','data':'32.0'},
-            {time:'2.15','data':'32.4'},
-            {time:'2.19','data':'32.8'},
-            {time:'2.23','data':'33.2'},
-            {time:'2.17','data':'33.5'},
-            {time:'3.01','data':'33.7'},
-            {time:'3.05','data':'34.0'},
-            {time:'3.09','data':'34.5'},
-            {time:'3.13','data':'34.9'},
-            {time:'3.17','data':'35.2'},
-            {time:'3.21','data':'35.5'},
-            {time:'3.25','data':'36.1'},
-            {time:'3.29','data':'36.3'},
-            {time:'4.02','data':'36.7'},
-            {time:'4.06','data':'36.9'},
-            {time:'4.10','data':'37.2'},
+            {time:'1.14','疫苗接种数':'29.3'},
+            {time:'1.18','疫苗接种数':'29.5'},
+            {time:'1.22','疫苗接种数':'29.8'},
+            {time:'1.26','疫苗接种数':'30.1'},
+            {time:'1.30','疫苗接种数':'30.5'},
+            {time:'2.03','疫苗接种数':'30.9'},
+            {time:'2.07','疫苗接种数':'31.6'},
+            {time:'2.11','疫苗接种数':'32.0'},
+            {time:'2.15','疫苗接种数':'32.4'},
+            {time:'2.19','疫苗接种数':'32.8'},
+            {time:'2.23','疫苗接种数':'33.2'},
+            {time:'2.17','疫苗接种数':'33.5'},
+            {time:'3.01','疫苗接种数':'33.7'},
+            {time:'3.05','疫苗接种数':'34.0'},
+            {time:'3.09','疫苗接种数':'34.5'},
+            {time:'3.13','疫苗接种数':'34.9'},
+            {time:'3.17','疫苗接种数':'35.2'},
+            {time:'3.21','疫苗接种数':'35.5'},
+            {time:'3.25','疫苗接种数':'36.1'},
+            {time:'3.29','疫苗接种数':'36.3'},
+            {time:'4.02','疫苗接种数':'36.7'},
+            {time:'4.06','疫苗接种数':'36.9'},
+            {time:'4.10','疫苗接种数':'37.2'},
         ]
         this.chartDom = null;
     }
@@ -49,7 +50,7 @@ class Vaccine extends React.Component{
             legend: {},
             tooltip: {},
             dataset: {
-              dimensions: ['time', 'data'],
+              dimensions: ['time', '疫苗接种数'],
               source: this.state.initData,
             //   source: this.,
 
@@ -99,7 +100,7 @@ class Vaccine extends React.Component{
     render()
     {
         return(
-            <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+            <div style={{width:'78%',marginLeft:'2%'}}>
                 <Title title="疫情数据图">接种疫苗</Title>
                 <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                     <div style={{textIndent:'20px',marginBottom:'20px',height:'700px'}}>

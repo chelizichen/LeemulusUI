@@ -1,6 +1,6 @@
 let chart2 = {
     title:{
-        text:"Last 10 Days Step",
+        text:"Test 02 Chart",
         textStyle:{
             color:"#366bf3",
             fontFamily:"Segoe UI",

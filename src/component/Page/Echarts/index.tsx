@@ -10,8 +10,8 @@ function MyEcharts()
 {
     return(
         <div>
-              <div style={{display:'flex',marginTop:'20px'}}>
-                <Board style={{width:'20%',padding:'10px'}} border>
+              <div style={{display:'flex',marginTop:'20px',paddingLeft:'20px',paddingRight:'20px'}}>
+                <Board style={{width:'18%',padding:'10px 1%'}} border>
                     <CollapseItemCell to={"demo1"} content={"项目1"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"demo2"} content={"项目2"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"demo3"} content={"项目3"} style={{textAlign:"center"}}></CollapseItemCell>

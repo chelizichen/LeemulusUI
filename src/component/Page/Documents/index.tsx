@@ -4,6 +4,7 @@ import { Board } from "../../../leemulus/Board";
 import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Collapse";
 import { AxiosComponent } from "./component/axios";
 import { TestCallBack } from "./component/callback";
+import { EchartsDoc } from "./component/echarts";
 import { LocalStorageComponent } from "./component/loaclStorage";
 import { UseLocationDemo } from "./component/location";
 import { Presicion } from "./component/presicion";
@@ -25,9 +26,9 @@ function Documents()
             window.location.href = hrePath
         }
     }
-    return(
-        <div style={{display:'flex',marginTop:'20px'}}>
-        <Board style={{width:'20%',padding:'10px'}} border>
+    return(     
+        <div style={{display:'flex',marginTop:'20px',paddingLeft:'20px',paddingRight:'20px'}}>
+            <Board style={{width:'18%',padding:'10px 1%'}} border>
             <Collapse border={false} defaultActive={0}  width={"100%"}>
                     <CollapseItem title={"# 前言"} subtitle={"介绍"} name={0}>
                         <CollapseItemCell to={"intro"} content={"简介"} style={{textAlign:"center"}}></CollapseItemCell>
@@ -52,6 +53,8 @@ function Documents()
                         <CollapseItemCell to={"callback"} content={"CallBack"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={"sethook"} content={"SetHook"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`uselocation?msg=${msg}`} content={"UseLocation"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`echarts`} content={"Echarts"} style={{textAlign:"center"}}></CollapseItemCell>
+
                     </CollapseItem>
             </Collapse>
         </Board>
@@ -63,7 +66,8 @@ function Documents()
             <Route path="callback" element={<TestCallBack/>}></Route>
             <Route path="presicion" element={<Presicion/>}></Route>
             <Route path="sethook" element={<SetNewHook/>}></Route>
-            <Route path="uselocation" element={<UseLocationDemo str="value1"/>}></Route>
+            <Route path="uselocation" element={<UseLocationDemo/>}></Route>
+            <Route path="echarts" element={<EchartsDoc/>}></Route>
 
         </Routes>
     </div>

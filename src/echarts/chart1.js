@@ -1,6 +1,6 @@
 let chart1 = {
     title: {
-        text: 'Last 7  Days  State',
+        text: 'Test 01 Chart',
         padding:[10,0,0,100],
         textStyle:{
             color:"#3b94a9",

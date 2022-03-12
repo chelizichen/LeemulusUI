@@ -14,7 +14,8 @@ function SetNewHook()
     let [num,SetNum] = useState(0)
     let [newNum,setNewNum] = useNum(10)
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
             <Title title="SetHook">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>           
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>

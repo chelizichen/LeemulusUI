@@ -24,7 +24,7 @@ function Presicion()
                 return args.a + args.b
         })
         console.log(num);
-        
+
         try {
             let num = setNumProxy({a:0.1,b:0.2,},7,
                 ({...args}:addNum)=>{
@@ -41,7 +41,8 @@ function Presicion()
         
 
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
             <Title title="Presicion">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 

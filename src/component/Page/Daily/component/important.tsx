@@ -8,12 +8,13 @@ function Important()
 {
 
     return (
-      <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+      <div style={{width:'78%',marginLeft:'2%'}}>
+
           <Title title="Important">
             <ShowCurrTime/>
           </Title>
 
-          <Board  border style={{padding:'30px 50px',marginTop:'20px',marginBottom:'20px'}}>  
+          <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>  
               <ol>
                 {
                   initTask.map( (el:itemMenuInterFace) =>{

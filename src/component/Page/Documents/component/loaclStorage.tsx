@@ -26,7 +26,8 @@ function LocalStorageComponent()
     },[data])
 
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
             <Title title="LocalStorage">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 

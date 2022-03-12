@@ -50,9 +50,9 @@ function Home()
             <div className="home_out_bg">
                 <div className="content">
                     <div className="intro">
-                        <div style={{fontSize:'32px'}}>七月实习使用 Vue2+Element</div>
-                        <div style={{fontSize:'32px'}}>彼时自学 Vue3+Vant</div>
-                        <div style={{fontSize:'32px'}}>现在我将使用 React Hooks 和 自己封装的UI组件重新编写 </div>
+                        <div style={{fontSize:'32px'}}>自己封装了一些 常见的 UI 组件</div>
+                        <div style={{fontSize:'32px'}}> 还在调试使用中 </div>
+                        <div style={{fontSize:'32px'}}> 全面支持TypeScript </div>
                         <div style={{fontSize:'32px'}}><b>Leemulus</b> 13:06 2022/2/6</div>
                     </div>
                     <Slider defaultValue={0} min={0} max={100} step={1} changeValue={95} bindChange={linkToIntroduce} style={{width:'200px'}}/>

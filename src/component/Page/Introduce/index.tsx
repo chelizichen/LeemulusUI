@@ -24,11 +24,11 @@ import { ITitle } from "./component/title"
 function Introduce()
 {
     return(
-        <div style={{display:'flex',marginTop:'20px'}}>
-            <Board style={{width:'20%',padding:'10px'}} border>
+        <div style={{display:'flex',marginTop:'20px',paddingLeft:'20px',paddingRight:'20px'}}>
+            <Board style={{width:'18%',padding:'10px 1%'}} border>
                 <Collapse border={false} defaultActive={0}  width={"100%"}>
                         <CollapseItem title={"# 前言"} subtitle={"介绍"} name={0}>
-                            <CollapseItemCell to={"intro"} content={"简介"} style={{textAlign:"center"}}></CollapseItemCell>
+                           <CollapseItemCell to={"intro"} content={"简介"} style={{textAlign:"center"}}></CollapseItemCell>
                             <CollapseItemCell to={"use"} content={"使用"} style={{textAlign:"center"}}></CollapseItemCell>
                         </CollapseItem>
                         <CollapseItem title={"# 开发"} subtitle={"过程"} name={0}>

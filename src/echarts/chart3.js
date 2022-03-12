@@ -1,6 +1,6 @@
 let chart3 ={
     title:{
-        text:"Last 7 Days Cost",
+        text:"Test 03 Chart",
         textStyle:{
             color:"#c598b5",
             fontFamily:"Segoe UI",

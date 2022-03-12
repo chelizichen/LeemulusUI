@@ -32,7 +32,8 @@ function Today()
         SetImportant( isImportant => isImportant === true?false:true)
     }
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
             <Title title="Today">
                 <ShowCurrTime/>
             </Title>

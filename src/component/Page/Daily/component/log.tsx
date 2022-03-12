@@ -5,7 +5,8 @@ import { Title } from "../../../../leemulus/Title"
 function DailyLog()
 {
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
             <Title title="DailyLog">
                 日记
             </Title>
@@ -38,6 +39,11 @@ function DailyLog()
                 </div>
             </Board>
 
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>       
+                <div style={{display:'flex',alignItems:'center',justifyContent:'flex-start',fontSize:'30px'}}>
+                    3.12 Echarts 做完
+                </div>
+            </Board>
 
         </div>
     )

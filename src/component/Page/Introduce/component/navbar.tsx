@@ -4,7 +4,8 @@ import { NavBar } from "../../../../leemulus/NavBar"
 function INavbar()
 {
     return(
-        <div style={{width:'70%',padding:'10px 20px 0 20px'}}>
+        <div style={{width:'78%',marginLeft:'2%'}}>
+
         <Title title="NavBar">展示</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px'}}>
