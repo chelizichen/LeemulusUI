@@ -3,7 +3,8 @@ import axios from "axios";
 const axiosInstance = axios.create({
     withCredentials:true,
     baseURL:'http://172.20.10.4:3001/todo',
-    timeout:3000
+    timeout:3000,
+    headers:{}
 })
 
 axiosInstance.interceptors.request.use(

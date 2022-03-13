@@ -63,13 +63,13 @@ class Vaccine extends React.Component{
             yAxis: {
                 type:'value',
                 boundaryGap:[0,'100%'],
-                splitLine:{
-                    show:false
-                }
+                // splitLine:{
+                //     show:false
+                // }
             },
             series: [{
                 type: 'line',
-                showSymbol: false,
+                // showSymbol: false,
             }]
           };
 

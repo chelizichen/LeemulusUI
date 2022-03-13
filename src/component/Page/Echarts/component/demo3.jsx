@@ -1,4 +1,3 @@
-// import echarts from "echarts/types/dist/echarts";
 import * as echarts from 'echarts'
 import React from "react";
 import ecStat from 'echarts-stat';
@@ -151,7 +150,7 @@ class Demo3 extends React.Component{
             newData[i][0] = Math.random()* -5
           }
           this.setState({data:newData})
-        },4000)
+        },2000)
     }
     componentDidUpdate()
     {

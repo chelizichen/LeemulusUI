@@ -52,7 +52,7 @@ function Home()
                     <div className="intro">
                         <div style={{fontSize:'32px'}}>自己封装了一些 常见的 UI 组件</div>
                         <div style={{fontSize:'32px'}}> 还在调试使用中 </div>
-                        <div style={{fontSize:'32px'}}> 全面支持TypeScript </div>
+                        <div style={{fontSize:'32px'}}> 支持TypeScript </div>
                         <div style={{fontSize:'32px'}}><b>Leemulus</b> 13:06 2022/2/6</div>
                     </div>
                     <Slider defaultValue={0} min={0} max={100} step={1} changeValue={95} bindChange={linkToIntroduce} style={{width:'200px'}}/>
