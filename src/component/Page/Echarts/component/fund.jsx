@@ -1,6 +1,7 @@
+import axios from 'axios'
 import * as echarts from 'echarts'
 import React from 'react'
-import { get_005827, get_320007, get_CommpanyInfo } from '../../../../config/axiosGet'
+import { get_005827, get_320007, get_CommpanyInfo,get_167301, get_161725,get_002199 } from '../../../../config/axiosGet'
 import { Board } from '../../../../leemulus/Board'
 import { Title } from '../../../../leemulus/Title'
 class Fund extends React.Component{
@@ -14,12 +15,42 @@ class Fund extends React.Component{
 
         }
     }
+    getX_Worth(arrayProps)
+    {
+        let newArray = []
+        for(let i = 0;i<arrayProps.length;i++)
+        {
+            newArray.push(arrayProps[i].y)
+        }
+        return newArray
+    }
     async componentDidMount()
     {
         let data_320007 = await get_320007();
         let data_005827 = await get_005827();
-        console.log(data_005827);
-        // console.log(data);
+        let data_167301 = await get_167301();
+        let data_161725 = await get_161725();
+        let data_002199 = await get_002199();
+
+        axios.get('/api2/fundList/all').then(res=>{
+          console.log(res);
+        }).catch(err=>{
+          console.log(err);
+        })
+
+        // axios.get('/api2/fundList/add',{
+        //   params:{
+        //     buy_money:'200',
+        //     fund_id:'222222',
+        //     buy_day:1,
+        //     fund_name:'测试数据'
+        //   }
+        // }).then(res=>{
+        //   console.log(res);
+        // }).catch(err=>{
+        //   console.log(err);
+        // })
+
         this.option = {
             title: {
               text: 'Stacked Line'
@@ -28,7 +59,7 @@ class Fund extends React.Component{
               trigger: 'axis'
             },
             legend: {
-              data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+              data: ['易方达蓝筹', '诺安成长', '方正保险', '招商白酒', '前海军工']
             },
             grid: {
               left: '3%',
@@ -44,44 +75,44 @@ class Fund extends React.Component{
             xAxis: {
               type: 'category',
               boundaryGap: false,
-              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            //   data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
             },
             yAxis: {
               type: 'value'
             },
             series: [
               {
-                name: 'Email',
+                name: '易方达蓝筹',
                 type: 'line',
                 stack: 'Total',
-                data: [120, 132, 101, 134, 90, 230, 210]
+                data: this.getX_Worth(data_005827)
               },
               {
-                name: 'Union Ads',
+                name: '诺安成长',
                 type: 'line',
                 stack: 'Total',
-                data: [220, 182, 191, 234, 290, 330, 310]
+                data: this.getX_Worth(data_320007)
               },
               {
-                name: 'Video Ads',
+                name: '方正保险',
                 type: 'line',
                 stack: 'Total',
-                data: [150, 232, 201, 154, 190, 330, 410]
+                data: this.getX_Worth(data_167301)
               },
               {
-                name: 'Direct',
+                name: '招商白酒',
                 type: 'line',
                 stack: 'Total',
-                data: [320, 332, 301, 334, 390, 330, 320]
+                data: this.getX_Worth(data_161725)
               },
               {
-                name: 'Search Engine',
+                name: '前海军工',
                 type: 'line',
                 stack: 'Total',
-                data: [820, 932, 901, 934, 1290, 1330, 1320]
+                data: this.getX_Worth(data_002199)
               }
             ]
-          };
+        };
         this.chartDom = document.getElementById('main');
         let myChart = echarts.init(this.chartDom);
         this.option && myChart.setOption(this.option)
@@ -91,7 +122,7 @@ class Fund extends React.Component{
     {
         return(
             <div style={{width:'78%',marginLeft:'2%'}}>
-            <Title title="基金数据">320007</Title>
+            <Title title="基金数据">100 Days</Title>
             <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
                 <div style={{textIndent:'20px',marginBottom:'20px',height:'700px'}}>
                     <div id="main" style={{width:"100%",height:'80%'}}></div>

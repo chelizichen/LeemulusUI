@@ -6,7 +6,7 @@ function ShowCurrTime()
             <div style={{display:'flex',fontSize:'20px'}}>
                 <div>{currDate.getFullYear()}</div>
                 <div>年</div>
-                <div>{currDate.getMonth()}</div>
+                <div>{currDate.getMonth()+1}</div>
                 <div>月</div>
                 <div>{currDate.getDate()}</div>
                 <div>日</div>
