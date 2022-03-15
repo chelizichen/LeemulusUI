@@ -28,35 +28,27 @@ class Profit extends React.Component{
         });
         return fundName
     }
-    getFundMoney(propsFundArray)
+    async getFundMoney(propsFundArray)
     {
         let fundMoney = []
-
         // 问题。。 外部等待 foreach 结束
-        propsFundArray.forEach(async (element) => {
-            await this.getProfit( element.fund_id ).then(data=>{
-                fundMoney.push({value:element.buy_money * data })
-            }).catch(err=>{
-                console.log(err);
-            })
-        });
-        
-        // 查询最大 value
-        // let mostIndex = this.sortMostMoney(fundMoney)
-        // fundMoney[mostIndex].itemStyle = {
-        //     color: '#a90000'
-        // }
-        console.log('48',fundMoney); //[]
-        setTimeout(()=>{
+        for(let item of propsFundArray)
+        {
+            await this.getProfit( item.fund_id ).then(data=>{
+                console.log(data);
+                fundMoney.push({value:item.buy_money * data})
+            }).catch(err=>{ console.log(err)})
+        }
+        // 查询最大值
+        try {
             let mostIndex = this.sortMostMoney(fundMoney)
             fundMoney[mostIndex].itemStyle = {
                 color: '#a90000'
             }
-            console.log('54',fundMoney); // [] 5 length
-        },1000)
-
-
-
+        } catch (error) {
+            console.log(error);
+        }
+        return fundMoney
     }
     sortMostMoney(propsFundArray)
     {
@@ -108,6 +100,7 @@ class Profit extends React.Component{
             console.log(err);
         })
 
+        // await this.getFundMoney(this.fundArray)
         this.option ={
             xAxis: {
               type: 'category',
@@ -118,7 +111,7 @@ class Profit extends React.Component{
             },
             series: [
               {
-                data:this.getFundMoney(this.fundArray),
+                data:await this.getFundMoney(this.fundArray),
                 type: 'bar'
               }
             ]
