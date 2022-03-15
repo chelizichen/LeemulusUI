@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as echarts from 'echarts'
 import React from 'react'
-import { get_005827, get_320007, get_CommpanyInfo,get_167301, get_161725,get_002199 } from '../../../../config/axiosGet'
+import { get_CommpanyInfo, getFundById } from '../../../../config/axiosGet'
 import { Board } from '../../../../leemulus/Board'
 import { Title } from '../../../../leemulus/Title'
 class Fund extends React.Component{
@@ -26,11 +26,11 @@ class Fund extends React.Component{
     }
     async componentDidMount()
     {
-        let data_320007 = await get_320007();
-        let data_005827 = await get_005827();
-        let data_167301 = await get_167301();
-        let data_161725 = await get_161725();
-        let data_002199 = await get_002199();
+        let data_320007 = await getFundById('320007');
+        let data_005827 = await getFundById('005827');
+        let data_167301 = await getFundById('167301');
+        let data_161725 = await getFundById('161725');
+        let data_002199 = await getFundById('002199');
 
         axios.get('/api2/fundList/all').then(res=>{
           console.log(res);
