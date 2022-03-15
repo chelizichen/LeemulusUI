@@ -22,9 +22,11 @@ async function getFundById(number)
 {
     let data
     await axios.get(`/api1/pingzhongdata/${number}.js`).then(res=>{
+        // console.log(res.data);
         let arr = res.data.split("Data_netWorthTrend = ")[1].split(";/*累计净值走势*/")
         arr[0] = eval("("+arr[0]+")")
         arr[0] = arr[0].reverse()
+        // console.log(arr[0]);
         data = arr[0].slice(0,100).reverse()
         // console  .log(data);
     }).catch(err=>{

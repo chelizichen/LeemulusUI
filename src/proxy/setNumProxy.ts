@@ -29,7 +29,6 @@ interface numProps
 {
     [properkey:string]: number
 }
-
 function setNumProxy(target:Object,size:number,fn:Function)
 {
      // 先判断 倍数是否为10的倍数
@@ -58,7 +57,6 @@ function setNumProxy(target:Object,size:number,fn:Function)
     {
         throw new Error('倍数 不为 10 的倍数')
     }
-
 }
 export {
     setNumProxy0_1,

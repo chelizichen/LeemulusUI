@@ -8,6 +8,7 @@ import { Demo3 } from "./component/demo3"
 import { Fund } from "./component/fund"
 import { Profit } from "./component/Profit"
 import { Vaccine } from "./component/vaccine"
+import { SetFund } from './component/setFund'
 
 function MyEcharts()
 {
@@ -22,6 +23,7 @@ function MyEcharts()
                     <CollapseItemCell to={"vaccine"} content={"疫情数据"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"buyfund"} content={"购入"} style={{textAlign:"center"}}></CollapseItemCell>
                     <CollapseItemCell to={"profit"} content={"盈利"} style={{textAlign:"center"}}></CollapseItemCell>
+                    <CollapseItemCell to={"setFund"} content={"保存数据"} style={{textAlign:"center"}}></CollapseItemCell>
                 
                 </Board>
                 <Routes>
@@ -32,7 +34,9 @@ function MyEcharts()
                     <Route path="vaccine" element={<Vaccine/>}></Route>
                     <Route path="buyfund" element={<BuyFund/>}></Route>
                     <Route path="profit" element={<Profit/>}></Route>
+                    <Route path="setFund" element={<SetFund/>}></Route>
 
+                    
 
                 </Routes>  
             </div>

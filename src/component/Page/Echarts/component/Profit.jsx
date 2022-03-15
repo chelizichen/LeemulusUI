@@ -31,7 +31,6 @@ class Profit extends React.Component{
     async getFundMoney(propsFundArray)
     {
         let fundMoney = []
-        // 问题。。 外部等待 foreach 结束
         for(let item of propsFundArray)
         {
             await this.getProfit( item.fund_id ).then(data=>{
@@ -67,6 +66,7 @@ class Profit extends React.Component{
         let buyDay;
         let profit;
         let fundData = await getFundById(fundId);
+        // 得到购买天数
         await axios.get('/api2/fundList/id',{
             params:{
                 id:fundId
@@ -76,6 +76,7 @@ class Profit extends React.Component{
         }).catch(err=>{
             console.log(err);
         })
+        // 得到第一天买与当天的数据
         let newData = fundData.slice(0,buyDay)
         profit = setNumProxy({
             new:newData[0].y,
