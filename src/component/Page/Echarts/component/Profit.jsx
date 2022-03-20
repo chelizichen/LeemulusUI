@@ -92,7 +92,7 @@ class Profit extends React.Component{
         })
         return profit
     }
-
+    // mounted();
     async componentDidMount()
     {
         await axios.get('/api2/fundList/all').then(res=>{
