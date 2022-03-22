@@ -4,10 +4,13 @@ import { Board } from "../../../leemulus/Board";
 import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Collapse";
 import { AxiosComponent } from "./component/axios";
 import { TestCallBack } from "./component/callback";
+import { ContextDemo } from "./component/context";
 import { EchartsDoc } from "./component/echarts";
+import { FINDDomMode } from "./component/findDomMode";
 import { LocalStorageComponent } from "./component/loaclStorage";
 import { UseLocationDemo } from "./component/location";
 import { Presicion } from "./component/presicion";
+import { RefDemo } from "./component/refs";
 import { SessionStorageComponent } from "./component/sessionStorage";
 import { SetNewHook } from "./component/sethook";
 
@@ -54,6 +57,9 @@ function Documents()
                         <CollapseItemCell to={"sethook"} content={"SetHook"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`uselocation?msg=${msg}`} content={"UseLocation"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`echarts`} content={"Echarts"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`finddommode`} content={"FindDomMode"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`refs`} content={"Refs"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`context`} content={"Context"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -68,6 +74,10 @@ function Documents()
             <Route path="sethook" element={<SetNewHook/>}></Route>
             <Route path="uselocation" element={<UseLocationDemo/>}></Route>
             <Route path="echarts" element={<EchartsDoc/>}></Route>
+            <Route path="finddommode" element={<FINDDomMode/>}></Route>
+            <Route path="refs" element={<RefDemo/>}></Route>
+            <Route path="context" element={<ContextDemo/>}></Route>
+
 
         </Routes>
     </div>
