@@ -5,6 +5,7 @@ import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Coll
 import { AxiosComponent } from "./component/axios";
 import { TestCallBack } from "./component/callback";
 import { ContextDemo } from "./component/context";
+import { DecoratorDemo } from "./component/decorator";
 import { EchartsDoc } from "./component/echarts";
 import { FINDDomMode } from "./component/findDomMode";
 import { LocalStorageComponent } from "./component/loaclStorage";
@@ -60,6 +61,7 @@ function Documents()
                         <CollapseItemCell to={`finddommode`} content={"FindDomMode"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`refs`} content={"Refs"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`context`} content={"Context"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`decorator`} content={"Decorator"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -77,7 +79,7 @@ function Documents()
             <Route path="finddommode" element={<FINDDomMode/>}></Route>
             <Route path="refs" element={<RefDemo/>}></Route>
             <Route path="context" element={<ContextDemo/>}></Route>
-
+            <Route path="decorator" element={<DecoratorDemo/>}></Route>
 
         </Routes>
     </div>
