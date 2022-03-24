@@ -14,6 +14,8 @@ import { Presicion } from "./component/presicion";
 import { RefDemo } from "./component/refs";
 import { SessionStorageComponent } from "./component/sessionStorage";
 import { SetNewHook } from "./component/sethook";
+import { TestLogin } from "./component/testLogin";
+import { VDirective } from "./component/v_directive";
 
 function Documents()
 {
@@ -62,6 +64,8 @@ function Documents()
                         <CollapseItemCell to={`refs`} content={"Refs"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`context`} content={"Context"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`decorator`} content={"Decorator"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`testlogin`} content={"TestLogin"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`v_directive`} content={"V-Directive"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -79,7 +83,8 @@ function Documents()
             <Route path="finddommode" element={<FINDDomMode/>}></Route>
             <Route path="refs" element={<RefDemo/>}></Route>
             <Route path="context" element={<ContextDemo/>}></Route>
-            <Route path="decorator" element={<DecoratorDemo/>}></Route>
+            <Route path="testlogin" element={<TestLogin/>}></Route>
+            <Route path="v_directive" element={<VDirective/>}></Route>
 
         </Routes>
     </div>
