@@ -87,7 +87,6 @@ class DecoratorDemo extends React.Component{
     {
         console.log('hello world NXT');
         throw new Error("错误消息");
-        
     }
     render()
     {

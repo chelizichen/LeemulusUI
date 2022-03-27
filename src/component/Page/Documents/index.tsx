@@ -10,7 +10,9 @@ import { EchartsDoc } from "./component/echarts";
 import { FINDDomMode } from "./component/findDomMode";
 import { LocalStorageComponent } from "./component/loaclStorage";
 import { UseLocationDemo } from "./component/location";
+import { MixinComponent } from "./component/mixin";
 import { Presicion } from "./component/presicion";
+import { ReadonlyComponent } from "./component/readonly";
 import { RefDemo } from "./component/refs";
 import { SessionStorageComponent } from "./component/sessionStorage";
 import { SetNewHook } from "./component/sethook";
@@ -66,6 +68,8 @@ function Documents()
                         <CollapseItemCell to={`decorator`} content={"Decorator"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`testlogin`} content={"TestLogin"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`v_directive`} content={"V-Directive"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`readonly`} content={"Readonly"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`mixin`} content={"Mixin"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -85,6 +89,9 @@ function Documents()
             <Route path="context" element={<ContextDemo/>}></Route>
             <Route path="testlogin" element={<TestLogin/>}></Route>
             <Route path="v_directive" element={<VDirective/>}></Route>
+            <Route path="readonly" element={<ReadonlyComponent/>}></Route>
+            <Route path="mixin" element={<MixinComponent/>}></Route>
+
 
         </Routes>
     </div>
