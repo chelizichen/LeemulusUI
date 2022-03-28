@@ -12,6 +12,7 @@ import { LocalStorageComponent } from "./component/loaclStorage";
 import { UseLocationDemo } from "./component/location";
 import { MixinComponent } from "./component/mixin";
 import { Presicion } from "./component/presicion";
+import { ReComponent } from "./component/re";
 import { ReadonlyComponent } from "./component/readonly";
 import { RefDemo } from "./component/refs";
 import { SessionStorageComponent } from "./component/sessionStorage";
@@ -70,6 +71,7 @@ function Documents()
                         <CollapseItemCell to={`v_directive`} content={"V-Directive"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`readonly`} content={"Readonly"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`mixin`} content={"Mixin"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`re`} content={"Regular"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -91,6 +93,7 @@ function Documents()
             <Route path="v_directive" element={<VDirective/>}></Route>
             <Route path="readonly" element={<ReadonlyComponent/>}></Route>
             <Route path="mixin" element={<MixinComponent/>}></Route>
+            <Route path="re" element={<ReComponent/>}></Route>
 
 
         </Routes>
