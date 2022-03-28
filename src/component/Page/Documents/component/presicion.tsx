@@ -2,6 +2,9 @@ import { useEffect } from "react"
 import { Board } from "../../../../leemulus/Board"
 import { Title } from "../../../../leemulus/Title"
 import { setNumProxy } from "../../../../proxy/setNumProxy"
+import presicion from "../../../../assets/code/presicion.png"
+import presicion1 from "../../../../assets/code/presicion1.png"
+
 
 interface addNum{
     a:number,
@@ -19,6 +22,7 @@ function Presicion()
         // console.log((num.a+num.b)/100);
 
         // 版本 # 0.0.2
+
         let num = setNumProxy({a:0.1,b:0.2,},100,
             ({...args}:addNum)=>{
                 return args.a + args.b
@@ -31,10 +35,8 @@ function Presicion()
                     return args.a + args.b
             })
             console.log(num);
-            
         } catch (error) {
             console.log(error);
-            
         }
         
     },[])
@@ -58,6 +60,17 @@ function Presicion()
                 </div>
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',fontWeight:900}}>
                     0.1 + 0.2 = 0.30000000000000004
+                </div>
+            </Board>
+
+            <Title title="0.0.2">代码</Title>
+            <Board  border style={{padding:'20px',marginTop:'20px',marginBottom:'20px'}}>
+                
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',marginRight:'20px'}}>
+                    <img src={presicion}  style={{width:"100%",height:"100%",borderRadius:'10px'}} alt="decorator 使用"/>
+                </div>
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',marginRight:'20px'}}>
+                    <img src={presicion1}  style={{width:"100%",height:"100%",borderRadius:'10px'}} alt="decorator 使用"/>
                 </div>
             </Board>
 

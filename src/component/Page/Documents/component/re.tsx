@@ -12,11 +12,12 @@ class ReComponent extends React.Component{
     }
 
     reTest={
-        testPhone:(/134[0-9]{4}3442/ as RegExp),  // 匹配电话号码,
-        testEmail:(/^[0-9]{5,11}@(qq|163).com/ as RegExp), // 匹配邮箱
-        testNull:/\S/, // 首字不能为空
+        testPhone:/1[0-9]{10}$/,  // 匹配电话号码,
+        testEmail:/^[0-9]{5,11}@(qq|163).com$/ , // 匹配邮箱
+        testNull:/\S+$/, // 首字不能为空
         testEnglishStr:/^[a-zA-Z]+$/, // 开头是为英文
-        testChineseStr:/^([\u0931-\uFFE5]{2,4})+$/ // 必须为中文 
+        testChineseStr:/^([\u0931-\uFFE5]{2,4})$/, // 必须为中文 
+        testPost:/^\d{6}$/ // 邮编
     }
     state = {
         eMailIsCorrect:false,
@@ -24,6 +25,7 @@ class ReComponent extends React.Component{
         NullCorrect:false,
         EnglishCorrect:false,
         ChineseStr:false,
+        PostCorrect:false,
     }
     handleRegular(regularString: keyof typeof this.reTest ,str:string,state:keyof typeof this.state)
     {
@@ -40,7 +42,7 @@ class ReComponent extends React.Component{
     }
     render()
     {
-        const { eMailIsCorrect,phoneCorrect,NullCorrect,ChineseStr,EnglishCorrect } = this.state
+        const { eMailIsCorrect,phoneCorrect,NullCorrect,ChineseStr,EnglishCorrect,PostCorrect } = this.state
         return(
             <div style={{width:'78%',marginLeft:'2%'}}>
 
@@ -73,7 +75,12 @@ class ReComponent extends React.Component{
                     </div>
                     <ReTips falseColor={"red"} trueColor={"green"} fontSize={"16px"} correct={EnglishCorrect} trueMessage={"输入正确"} falseMessage={"134xxxx3442"}></ReTips>
                 </div>
-
+                <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',marginRight:'20px',fontWeight:900,display:'flex',alignItems:'center',justifyContent:'flex-start'}}>
+                    <div>
+                        邮编：<input onChange={(el)=>this.handleRegular('testPost',el.target.value,'PostCorrect')}/>
+                    </div>
+                    <ReTips falseColor={"red"} trueColor={"green"} fontSize={"16px"} correct={PostCorrect} trueMessage={"输入正确"} falseMessage={"不能为空"}></ReTips>
+                </div>
                 <div style={{textIndent:'20px',marginBottom:'20px',marginTop:'20px',marginRight:'20px',fontWeight:900,display:'flex',alignItems:'center',justifyContent:'flex-start'}}>
                     <div>
                         不能为空：<input onChange={(el)=>this.handleRegular('testNull',el.target.value,'NullCorrect')}/>

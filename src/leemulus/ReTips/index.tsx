@@ -1,4 +1,4 @@
-import { CSSProperties, useMemo, useState } from "react"
+import { CSSProperties, useMemo } from "react"
 
 interface ReTipsProps
 {

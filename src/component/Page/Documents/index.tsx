@@ -1,5 +1,5 @@
-import { memo, useEffect, useRef, useState } from "react"
-import { Route, Routes, useHref, useLocation } from "react-router";
+import { memo, useRef, useState } from "react"
+import { Route, Routes, useHref } from "react-router";
 import { Board } from "../../../leemulus/Board";
 import { Collapse, CollapseItem, CollapseItemCell } from "../../../leemulus/Collapse";
 import { AxiosComponent } from "./component/axios";
@@ -19,6 +19,8 @@ import { SessionStorageComponent } from "./component/sessionStorage";
 import { SetNewHook } from "./component/sethook";
 import { TestLogin } from "./component/testLogin";
 import { VDirective } from "./component/v_directive";
+import { CommunicateComponent } from "./component/communicate";
+
 
 function Documents()
 {
@@ -72,6 +74,7 @@ function Documents()
                         <CollapseItemCell to={`readonly`} content={"Readonly"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`mixin`} content={"Mixin"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`re`} content={"Regular"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`communicate`} content={"Communicate"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -88,12 +91,14 @@ function Documents()
             <Route path="echarts" element={<EchartsDoc/>}></Route>
             <Route path="finddommode" element={<FINDDomMode/>}></Route>
             <Route path="refs" element={<RefDemo/>}></Route>
+            <Route path="decorator" element={<DecoratorDemo/>}></Route>
             <Route path="context" element={<ContextDemo/>}></Route>
             <Route path="testlogin" element={<TestLogin/>}></Route>
             <Route path="v_directive" element={<VDirective/>}></Route>
             <Route path="readonly" element={<ReadonlyComponent/>}></Route>
             <Route path="mixin" element={<MixinComponent/>}></Route>
             <Route path="re" element={<ReComponent/>}></Route>
+            <Route path="communicate" element={<CommunicateComponent/>}></Route>
 
 
         </Routes>

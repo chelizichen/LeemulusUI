@@ -70,7 +70,7 @@ class ReadonlyComponent extends React.Component{
                     <img src={readonly1}  style={{width:"100%",height:"100%",borderRadius:'10px'}} alt="decorator 使用"/>
                 </div>
             </Board>
-        </div>
+            </div>
         )
     }
 }
