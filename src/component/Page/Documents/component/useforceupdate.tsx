@@ -1,4 +1,3 @@
-import { useState,useMemo } from "react"
 import { Board } from "../../../../leemulus/Board"
 import { Button } from "../../../../leemulus/Button"
 import { Title } from "../../../../leemulus/Title"
@@ -7,12 +6,9 @@ import { UseForceUpdate } from "../../../../proxy/useForceUpdate";
 
 function UseForceUpdateDemo()
 {
-    // let [count,setCount] = useState<number>(0)   
     const foreUpdate = UseForceUpdate()
     let value = 0
-    useMemo(()=>{
-        return value
-    },[value]);
+
     function add()
     {
         value++

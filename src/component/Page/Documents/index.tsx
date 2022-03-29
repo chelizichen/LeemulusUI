@@ -21,6 +21,7 @@ import { TestLogin } from "./component/testLogin";
 import { VDirective } from "./component/v_directive";
 import { CommunicateComponent } from "./component/communicate";
 import { UseForceUpdateDemo } from "./component/useforceupdate";
+import { DeepCopyComponent } from "./component/copy";
 
 
 function Documents()
@@ -77,6 +78,7 @@ function Documents()
                         <CollapseItemCell to={`re`} content={"Regular"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`communicate`} content={"Communicate"} style={{textAlign:"center"}}></CollapseItemCell>
                         <CollapseItemCell to={`useforceupdate`} content={"UseForceUpdate"} style={{textAlign:"center"}}></CollapseItemCell>
+                        <CollapseItemCell to={`deepCopy`} content={"DeepCopy"} style={{textAlign:"center"}}></CollapseItemCell>
 
                     </CollapseItem>
             </Collapse>
@@ -102,6 +104,7 @@ function Documents()
             <Route path="re" element={<ReComponent/>}></Route>
             <Route path="communicate" element={<CommunicateComponent/>}></Route>
             <Route path="useforceupdate" element={<UseForceUpdateDemo/>}></Route>
+            <Route path="deepCopy" element={<DeepCopyComponent/>}></Route>
 
 
         </Routes>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         *  shallowCopy 浅拷贝  只拷贝对象引用
+         * 
+        */
+        // let a = []
+        // let b = a
+        // b.push(1)
+        // b.push(2)
+        // console.log(a); //【1，2】
+
+        // let c = {a:'1'}
+        // let d = c
+        // d.a = '2'
+        // console.log(c); //a:'2'
+        
+
+        /**
+         *  deepCopy
+         * 1、 对象拷贝 object.assign 只有一层拷贝，在第二层就成了浅拷贝
+         * 
+        */
+
+        // 一层拷贝
+        // function deepCopy(target)
+        // {
+        //     let newObj = Object.assign({},target)
+        //     return newObj
+        // }
+
+        // let d1 = {
+        //     a:'1',
+        //     b:{
+        //         c:1
+        //     }
+        // }
+
+        // let d2 = deepCopy(d1)
+
+        // d2.a = '2'
+        // d2.b.c = 2
+
+        // console.log(d1);
+        // console.log(d2);
+
+        /**
+         *  多层拷贝 
+         * 1、判断是否为引用类型
+         * 2、判断 数组 或者 对象
+        */
+        // let a = {} // object 
+        // let b = [] // object
+        // let c = function(){} // function
+
+
+        function deepCopy(obj)
+        {
+            let newobj = null;
+            if(typeof obj == "object" && typeof obj !== null )
+            {
+                newobj = obj instanceof Array?[]:{}
+                for (let i in obj)
+                {
+                    newobj[i] = deepCopy(obj[i])
+                }
+            }
+            else
+            {
+                newobj = obj
+            }
+            return newobj
+        }
+
+        let dd1 = {
+            a:1,
+            b:{
+                c:2,
+                d:{
+                    e:3,
+                    f:[1,2,3]
+                }
+            }
+        }
+        let dd2 = deepCopy(dd1)
+        dd2.b.d.e = 5
+        dd2.b.d.f[0] = 3
+
+
+        console.log(dd2);
+        console.log(dd1);
+    </script>
+</body>
+</html>
