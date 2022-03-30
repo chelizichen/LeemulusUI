@@ -17,11 +17,12 @@
             {a:'刘',b:'忠玉',c:'女朋友'},
         ]
         console.log(data.sort(
-            function(a,b)
+            function(lastObj,nextObj)
             {
-                a.b.localeCompare(b.b)
-                a.c.localeCompare(b.c)
-                return a.a.localeCompare(b.a)
+                // 先后比较
+                lastObj.b.localeCompare(nextObj.b)
+                lastObj.c.localeCompare(nextObj.c)
+                return lastObj.a.localeCompare(nextObj.a)
             }
         ));
     </script>

@@ -3,6 +3,7 @@ import { Button } from "../../../../leemulus/Button"
 import { Title } from "../../../../leemulus/Title"
 import { UseForceUpdate } from "../../../../proxy/useForceUpdate";
 // import diyhook from "../../../../assets/code/diyhook.png"
+{/* <img src={diyhook}  style={{width:"100%",height:"100%",borderRadius:'10px'}} alt="decorator 使用"/> */}
 
 function UseForceUpdateDemo()
 {

@@ -1,3 +1,4 @@
+
 function deepCopy(target:any)
 {
     let newObj:any = null;
