@@ -20,7 +20,7 @@ class FINDDomMode extends React.Component{
     }
     unMountDom(dom:HTMLElement)
     {
-        dom.remove()
+        dom?.remove()
     }
     render()
     {
