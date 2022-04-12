@@ -50,8 +50,8 @@ function Home()
             <div className="home_out_bg">
                 <div className="content">
                     <div className="intro">
-                        <div style={{fontSize:'32px'}}>自己封装了一些 常见的 UI 组件</div>
-                        <div style={{fontSize:'32px'}}> 还在调试使用中 </div>
+                        <div style={{fontSize:'32px'}}> 个人博客</div>
+                        <div style={{fontSize:'32px'}}> 有封装的 UI组件 也有学习的记录 </div>
                         <div style={{fontSize:'32px'}}> 支持TypeScript </div>
                         <div style={{fontSize:'32px'}}><b>Leemulus</b> 13:06 2022/2/6</div>
                     </div>
@@ -70,9 +70,9 @@ function Home()
             <div className="exp_out">
                 <div style={{fontSize:'30px',fontWeight:600}}>Experience</div>
                 <div className="exp_content_out">
-                    <Article src={item1} content={'正在实习前端，负责还原页面和增加动态效果，主要以原生JS为主。'} time={'2021.4 - 2021.6'} />
-                    <Article src={item2} content={'瞄瞄科技实习前端，负责还原页面，编写Echarts，编写组件，联调接口，技术栈为Vue2+Element'} time={'2021.6 - 2021.9'} />
-                    <Article src={item3} content={'自学React，用TypeScript编写UI组件库，在Documents和Introduce均有介绍'} time={'2022'} />
+                    <Article src={item1} content={'技术菜鸟'} time={'2021.4 - 2021.6'} />
+                    <Article src={item2} content={'技术菜鸟'} time={'2021.6 - 2021.9'} />
+                    <Article src={item3} content={'技术菜鸟'} time={'2022'} />
                 </div>
             </div>
             

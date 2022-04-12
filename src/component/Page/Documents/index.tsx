@@ -85,6 +85,7 @@ function Documents()
         </Board>
 
         <Routes>
+            <Route path="/" element={<AxiosComponent/>}></Route>
             <Route path="axios" element={<AxiosComponent/>}></Route>
             <Route path="localstorage" element={<LocalStorageComponent/>}></Route>
             <Route path="sessionstorage" element={<SessionStorageComponent/>}></Route>

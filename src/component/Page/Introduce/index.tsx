@@ -58,6 +58,7 @@ function Introduce()
                 </Collapse>
             </Board>
             <Routes>
+                <Route path="/" element={<Intro/>}></Route>
                 <Route path="intro" element={<Intro/>}></Route>
                 <Route path="use" element={<Use/>}></Route>
                 <Route path="log" element={<Log/>}></Route>

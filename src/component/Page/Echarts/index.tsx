@@ -27,6 +27,7 @@ function MyEcharts()
                 
                 </Board>
                 <Routes>
+                    <Route path="/" element={<Demo1/>}></Route>
                     <Route path="demo1" element={<Demo1/>}></Route>
                     <Route path="demo2" element={<Demo2/>}></Route>
                     <Route path="demo3" element={<Demo3/>}></Route>
