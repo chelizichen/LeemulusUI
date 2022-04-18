@@ -10,21 +10,25 @@
     <script>
         // 面试题
         let data = [
-            {a:'刘',b:'忠玉',c:'对象'},
-            {a:'彭',b:'城',c:'自己'},
-            {a:'程',b:'正权',c:'朋友'},
-            {a:'余',b:'浪',c:'朋友'},
-            {a:'刘',b:'忠玉',c:'女朋友'},
+            {firstName:'张',lastName:'三',test:'对象'},
+            {firstName:'彭',lastName:'城',test:'自己'},
+            {firstName:'程',lastName:'正权',test:'朋友'},
+            {firstName:'余',lastName:'浪',test:'朋友'},
+            {firstName:'玉',lastName:'玉',test:'女朋友'},
         ]
-        console.log(data.sort(
+        console.log( 
+        
+        data.sort(
             function(lastObj,nextObj)
             {
                 // 先后比较
-                lastObj.b.localeCompare(nextObj.b)
-                lastObj.c.localeCompare(nextObj.c)
-                return lastObj.a.localeCompare(nextObj.a)
+                lastObj.lastName.localeCompare(nextObj.lastName)
+                lastObj.test.localeCompare(nextObj.test)
+                return lastObj.firstName.localeCompare(nextObj.firstName)
             }
-        ));
+        )
+        
+        );
     </script>
 </body>
 </html>
