@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+// import { request } from 'http'
+
 function get_CommpanyInfo(props)
 {
     const { testData } = props
@@ -21,6 +23,7 @@ function get_CommpanyInfo(props)
 async function getFundById(number)
 {
     let data
+
     await axios.get(`/api1/pingzhongdata/${number}.js`).then(res=>{
         // console.log(res.data);
         let arr = res.data.split("Data_netWorthTrend = ")[1].split(";/*累计净值走势*/")
