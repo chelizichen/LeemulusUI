@@ -1,3 +1,4 @@
+import { TestChildren } from './testChildren'
 import {WindowsView} from './windows'
 export interface initType
 {
@@ -14,7 +15,10 @@ export interface actionType {
     height?:number,
     id:number
 }
-const initState:initType[] = [{id:1,children:"千千阙歌",width:300,height:300}]
+const initState:initType[] = [
+    {id:1,children:"千千阙歌",width:300,height:300},
+    {id:2,children:TestChildren,width:400,height:400}
+]
 
 function ItemReducer(preState=initState,action:actionType)
 {

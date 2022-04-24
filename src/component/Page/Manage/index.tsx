@@ -14,11 +14,22 @@ function Manage()
             {
                 initState.map((EL:initType)=>{
                     console.log(EL);
-                    return (
-                        <WindowsView width={EL.width} height={EL.height}>
-                            {EL.children}
-                        </WindowsView>
-                    )
+                    if(typeof EL.children === 'function')
+                    {
+                        return (
+                            <WindowsView width={EL.width} height={EL.height} key={EL.id}>
+                                {new EL.children()}
+                            </WindowsView>
+                        )
+                    }
+                    else
+                    {
+                        return(
+                            <WindowsView width={EL.width} height={EL.height} key={EL.id}>
+                                {EL.children}
+                            </WindowsView>
+                        )
+                    }
                 })
             }
         </div>

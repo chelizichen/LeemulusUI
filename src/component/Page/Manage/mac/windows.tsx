@@ -1,4 +1,5 @@
 import { CSSProperties, useEffect, useRef, useState } from "react";
+import ReactDOM from "react-dom";
 import '../index.css'
 
 interface windowProps
@@ -56,12 +57,16 @@ function WindowsView(props:windowProps)
         container.current.style.left = `${left+e.movementX}px`
         container.current.style.top = `${top+e.movementY}px`
     }
+    function removeItem(e:any)
+    {
+        container.current.remove()   
+    }
     return(
         // onDrag={dragWindow}
         <>
             <div style={containerStyle} ref={container}>
                 <div style={dragBarStyle} ref={dragger}>
-                    <div className="w_red"></div>
+                    <div className="w_red" onClick={removeItem}></div>
                     <div className="w_yellow"></div>
                     <div className="w_green"></div>
                 </div>
@@ -69,7 +74,6 @@ function WindowsView(props:windowProps)
                     {
                         children
                     }
-                    {/* <h1> {I am content} </h1> */}
                 </div>
             </div>
         </>
