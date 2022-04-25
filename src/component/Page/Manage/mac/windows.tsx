@@ -13,10 +13,14 @@ function WindowsView(props:windowProps)
     let container = useRef({} as HTMLDivElement)
     let dragger = useRef({} as HTMLDivElement)
     const { width,height,children } = props
+    console.log(width);
+    console.log(height);
+    
+    
     const containerStyle:CSSProperties = 
     {
-        width: width===undefined?'400px':`${width}px`,
-        height: height===undefined?'400px':`${height}px`,
+        width: width===undefined||width === null||width.toString.length===0?'400px':`${width}px`,
+        height: height===undefined||height===null||height.toString.length===0?'400px':`${height}px`,
         position: 'absolute',
         left: '50%',
         top: '50%',
@@ -34,7 +38,7 @@ function WindowsView(props:windowProps)
     }
     const contentStyle:CSSProperties={
             width:'100%',
-            height: height===undefined?'370px':`${height-30}px`,
+            height: height===undefined||height===null||height.toString.length===0?'370px':`${height-30}px`,
             backgroundColor: '#f1f3f4',
             display: 'flex',
             alignItems: 'center',

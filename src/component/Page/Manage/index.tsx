@@ -3,6 +3,7 @@ import { useEffect, useReducer } from "react"
 import { Contain } from "./mac/contain"
 import { WindowsView } from './mac/windows'
 import { ItemReducer,initState,initType, actionType } from './mac/ItemReducer'
+import {BottomBar} from './mac/bottomBar'
 import './index.css'
 
 function Manage()
@@ -18,7 +19,7 @@ function Manage()
                     {
                         return (
                             <WindowsView width={EL.width} height={EL.height} key={EL.id}>
-                                {new EL.children()}
+                                {new EL.children(EL.props)}
                             </WindowsView>
                         )
                     }
@@ -32,6 +33,7 @@ function Manage()
                     }
                 })
             }
+            <BottomBar control={ControlTask}></BottomBar>
         </div>
     )
 }
