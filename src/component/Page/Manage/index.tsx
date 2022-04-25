@@ -4,6 +4,7 @@ import { Contain } from "./mac/contain"
 import { WindowsView } from './mac/windows'
 import { ItemReducer,initState,initType, actionType } from './mac/ItemReducer'
 import {BottomBar} from './mac/bottomBar'
+import {Baidu} from './mac/baidu'
 import './index.css'
 
 function Manage()
@@ -17,9 +18,12 @@ function Manage()
                     console.log(EL);
                     if(typeof EL.children === 'function')
                     {
+                        // console.log('函数类型调用');
                         return (
                             <WindowsView width={EL.width} height={EL.height} key={EL.id}>
-                                {new EL.children(EL.props)}
+                                {
+                                    EL.children(EL.props)
+                                }
                             </WindowsView>
                         )
                     }
@@ -34,6 +38,7 @@ function Manage()
                 })
             }
             <BottomBar control={ControlTask}></BottomBar>
+            {/* <Baidu></Baidu> */}
         </div>
     )
 }

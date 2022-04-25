@@ -101,6 +101,48 @@
     align-items: center;
     justify-content: start;
 }
+
+
+.baidu{
+    height: 299px;
+    width: 660px;
+    text-align:center;
+    
+}
+.baidu span .baidulogo{
+    height: 87px;
+    width: 356px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: 8px;
+    top: 2px;
+}
+.baidu input[type = text]{
+    position: relative;
+    left: -60px;
+    top: 15px;
+    height: 44px;
+    width: 550px;
+    border: 2px solid #c4c7ce;
+    border-radius: 10px 0 0 10px;
+    outline-color:#4e6ef2;/*点击边框变色*/
+    padding-left: 18px;
+}
+.baidu input[type = submit]{
+    height: 50px;
+    width: 108px;
+    top: -35px;
+    left: 271px;
+    position: relative;
+    background-color: #4e6ef2;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+}
+
 /* .w_drag-bar::before
 {
     content:"";

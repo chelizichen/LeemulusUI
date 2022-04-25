@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 interface TestProps
 {
     str:string
@@ -5,9 +7,11 @@ interface TestProps
 function TestChildren(props:TestProps)
 {
     const {str} = props
+
     return(
         <div>
-            I am a ChildRen {str}
+            
+            I am a ChildRen have Props {str}
         </div>
     )
 }

@@ -6,7 +6,7 @@ function TestChildrenNoProps(props:TestProps)
 {
     return(
         <div>
-            I am a ChildRen 
+            I am a ChildRen WithOut Props
         </div>
     )
 }
