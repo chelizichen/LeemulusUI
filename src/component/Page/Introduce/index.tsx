@@ -21,6 +21,7 @@ import { ISwitch } from "./component/switch"
 import { ITag } from "./component/tag"
 import { ITitle } from "./component/title"
 import { IReTips } from "./component/retips"
+import { ITab } from "./component/tab"
 
 function Introduce()
 {
@@ -53,6 +54,7 @@ function Introduce()
                             <CollapseItemCell to={"tag"} content={"Tag"} style={{textAlign:"center"}}></CollapseItemCell>
                             <CollapseItemCell to={"title"} content={"Title"} style={{textAlign:"center"}}></CollapseItemCell>
                             <CollapseItemCell to={"reTips"} content={"ReTips"} style={{textAlign:"center"}}></CollapseItemCell>
+                            <CollapseItemCell to={"tab"} content={"Tab"} style={{textAlign:"center"}}></CollapseItemCell>
                         
                         </CollapseItem>
                 </Collapse>
@@ -80,6 +82,8 @@ function Introduce()
                 <Route path="tag" element={<ITag/>}></Route>
                 <Route path="title" element={<ITitle/>}></Route>
                 <Route path="reTips" element={<IReTips/>}></Route>
+                <Route path="tab" element={<ITab/>}></Route>
+
             </Routes>
         </div>
     )
